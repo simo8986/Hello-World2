@@ -1,0 +1,118 @@
+/* eksempel1 
+(C) Copyright 2017: Niels Østergaard
+Responsive webdesign */
+
+
+/* først en del der ikke er påvirket af regler */
+
+body {
+    font-family: sans-serif;
+    background-color: #fff;
+    margin: 0.5em;
+    color: #000;
+}
+
+header {
+    grid-area: a;
+    background-color: #F00;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+nav {
+    grid-area: b;
+    background-color: #ccc;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#megetvigtigt{
+    grid-area: c;
+    background-color: #009e0f;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#vigtigt{
+    grid-area: d;
+    background-color: #0ff;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#knaptsaavigtigt{
+    grid-area: e;
+    background-color: #90f;
+    color: #fff;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#ikkesaavigtigt{
+    grid-area: f;
+    background-color: #f90;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+#sletikkevigtigt{
+    grid-area: g;
+    background-color: #274e13;
+    color: #fff;
+    padding: 0.2em;
+    margin-bottom: 0.5em;
+}
+
+footer {
+    grid-area: h;
+    font-size: 0.8em;
+    text-align: center;
+    background-color: #000;
+    color: #aaa;
+    padding: 0.1em;
+}
+
+@media screen and (min-width: 500px){
+    #pagewrap {
+        display: grid;
+        grid-gap: 0.5em;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 2fr 8fr 8fr 8fr 2fr;
+        grid-template-areas: 
+            "a a a"
+            "b c c"
+            "f d e"
+            "g g g"
+            "h h h";
+    }
+    
+    body {
+        font-size: 1.em;
+    }
+    
+    header, nav, #megetvigtigt, #vigtigt, #ikkesaavigtigt, #sletikkevigtigt, #knaptsaavigtigt {
+        margin-bottom: 0.0em;
+    }
+}
+
+
+@media screen and (min-width: 1000px) {
+    #pagewrap {
+        display: grid;
+        grid-gap: 0.5em;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: 1fr 3fr 3fr 2fr 1fr;
+        grid-template-areas: 
+            "a a a a"
+            "b c c d"
+            "f e e e"
+            "f g g g"
+            "h h h h";
+    }
+}
+
+
+
+
+
+
